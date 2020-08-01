@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  background: #343a40;
+}
+
+/* footer {
+  position: absolute;
+  bottom: 0px;
+  right : 0px;
+  left: 0px;
+  top:100vh
+} */
+.teamImg{
+  box-shadow: 0 0px 14px 0 rgb(252, 252, 252), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  z-index: 1;
+}
+.githubCustom{
+  z-index: 1;
+  
+}
+.customNavbar{
+  /* opacity:0.5; */
+  z-index: 1;
+  /* background-color: #392613; */
+  background-color: black;
+  height:100px
+}
+.textCustom{
+  color:white;
+  font-size: 19px;
+  background-color: black;
+  border: none;
+  
+}
+.carousel-inner{
+  width:100%;
+  max-height: 700px !important;
+  
+}
+
+
+/* database.html css */
+.database{
+  margin-top:150px
+}
+
+/* progress.html css */
+.progressCustom{
+  margin-top:150px;
+}
+.customLi{
+  font-size: 20px;
+}
+/* ----- */
+.customColor{
+  color:white;
+}
+
+.bottom{
+  bottom: 0px
+}
+
+Button .mapBtn:hover{
+  color:white;
+  background-color: blue;
+}
+
