@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "442983702681",
+    "firebase_url": "https://cameravision-b89d7.firebaseio.com",
+    "project_id": "cameravision-b89d7",
+    "storage_bucket": "cameravision-b89d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442983702681:android:e21b9fa14f49b84690d808",
+        "android_client_info": {
+          "package_name": "com.example.cameravision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442983702681-qpca4bk2krram6stprtknrnitj8lo0uk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCStm__oUJ3Z9fE3ctKSgGwrVWDKbZHNJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442983702681-qpca4bk2krram6stprtknrnitj8lo0uk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
