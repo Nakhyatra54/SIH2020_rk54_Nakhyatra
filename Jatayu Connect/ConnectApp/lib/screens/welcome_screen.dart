@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-
+//this is the Welcome screen for the user
 class WelcomeScreen extends StatefulWidget {
   static String id ='welcome';
   @override
@@ -61,7 +61,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     ),
 
 
-SizedBox(width: 20,),
+                      SizedBox(width: 20,),
 
                      Flexible(
                        child: TyperAnimatedTextKit(

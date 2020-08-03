@@ -2,6 +2,11 @@
 
 A Flutter application that uses the user's camera/gallery to upload it to Database and fetch Criminals info in real time.
 
+Highlights-
+•Can Click photos in real-time to Search the DB for existing Criminals Identification.
+•Can Also feed images from the gallery of the User to the DB for Criminal Identification.
+•Does not Store any Photos that are taken from the app in the DB to ensure the privacy of people.
+
 Some Screenshots of the app are attached below-
 
 

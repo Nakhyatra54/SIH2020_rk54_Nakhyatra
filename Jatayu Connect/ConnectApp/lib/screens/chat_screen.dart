@@ -4,6 +4,10 @@ import 'package:chatify/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+
+/*  This is the Chat Screen where all the chats would be displayed*/
+
+
 FirebaseUser loggedinUser;
 class ChatScreen extends StatefulWidget {
   static String id = 'chat_screen';
@@ -52,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: null,
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.close),
+              icon: Icon(Icons.cancel),
               onPressed: () {
                 _auth.signOut();
                 Navigator.pop(context);
