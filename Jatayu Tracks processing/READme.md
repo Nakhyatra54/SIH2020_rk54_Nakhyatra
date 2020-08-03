@@ -7,9 +7,13 @@ tracker.py is the script which is used to process the recorded videos and find c
 ## other files
 
 faceDetector.h5 : weights of the CNN architecture we trained for recogniser
+
 NAKHYATRAtracks.json : configuration file for the database
-haarcascade_frontalface_default.xml : supporting file
-vdo.mp4,vdo1.mp4,vdo2.mp4 :demo vdos
-VDOcapture.py: it is the program that will work as the software for the CCTV in terms of recording of videos. it will create a file on real time which will record timestamp corresponding to each frame recorded.
+
+haarcascade_frontalface_default.xml : supporting file vdo.mp4,vdo1.mp4,vdo2.mp4 :demo vdos
+
+VDOcapture.py: it is the program that will work as the software for the CCTV in terms of recording of videos. it will create a file on real 
+time which will record timestamp corresponding to each frame recorded.
+
 timestamp.csv,timestamp1.csv,timestamp2.csv: timestamp files corresponding to vdo vdo.mp4,vdo1.mp4 and vdo2.mp4
 
