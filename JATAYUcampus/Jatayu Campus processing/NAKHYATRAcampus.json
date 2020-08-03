@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nakhyatracampussecurity",
+  "private_key_id": "2498425016d8de1a3cb2e13a3e07a8983221c371",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjbzMbnDg3MPQ2\nosYLRyHjSd6xutGg9uqjA6Y/M6GDxgREsmcxpzVfHdscdS1Zbjf8ksXnxqiTkFFY\nORfx/VaJeGY/W9ILIdSGKQJnfF6/xLF3xl/ambWChi1tDAm6GWpMwqotpWG0J4N4\nbffClgVX5AbVEZURIXCGxxWArLJCtOlOCA8XxkH1tp/OlLUYk+VL/pFbc6vEP0ns\nP/W+4RhdSWzj5rPEekRh+eYSBW1SAL5MP1/g0pIufa1WBYaVIZctC09rQlhyOiy9\n7sleX9k8GZleVgy0Mphax1awqoWwrPY2jJsT6hqxKgkfzuW7cwgLuzIIOCbAfPPH\nX0JUcquVAgMBAAECggEAGPnz/gq0Pp8BG15p1Kxkveb6nP+3bJl/hzUWEX+S9d/r\npBH9mkV67xPRefpgWVPyQ2usyfx+o7qA6/Ihui4krPKU8abXJTNg1rXqs6T6l+T3\n2B2dZXtrFUzrIUifLe0XZS60sjAdi9okCeIIZJjnrSRgdOxwcwNAvqArJZR+05my\nPOBRpMYolkxX/351BVfWmJJiB+GEfg4lEqv2fSCZzN/fxWefEqMKpV57FAJYmJA4\n1o0FYtyzmwxQC5m8I03ORTq7AyOXOiHk40qi3/IhubQHyUBogOrocKetf/1gwJVi\n8S5F9JlnCbbqmaSk3Fwgs+jTbiggZrncNxTmwA+UWwKBgQDmeAsr8O3ZFs5V+Mud\n8+kIoA+1l6yqJXiqwGgVIlokfKwgNy0NtMe5U7X36JxhhHXIwprQ7k7v4cKXOUIm\n1aa0BXKcz3bsq3HybHk/uGSoOJ9t+4u1x1HryIqKsCPNzxpYL08w9pjfI3Vl2/vc\nDDFEPeHiEy4Wj2mDniawC7cDMwKBgQC1ihj9jaDyeeT/D/ZLJqOhRYaiJRjnr/Yy\n+pZmfpFvKyThfi63PnuYCu0uAwiKSm979ywyN51MJF+AStqqjKeXLPBGL00KhrzN\nQpUWdVo4d/mTUepiwF3SRWzvlzHtpfzo1DqJFYzzcdiRTqfdwky3RAoSpqtzNB+r\nlyPy0FkWFwKBgDuYoTLsq2SuvA6JNoYS05jSYx2PKiwZYnmtJX0JlAvJXW07N2BK\n9jabSfvgX8fry9VtVUFfznPDimE2gj+ukdwNaJTaJSOQNff9SuFKWmURt1Bmcrs/\n3pQ9GG5CnA+VVXemTDEaI2/YKHx9hURitr6xzd57HTjiPuO1GsX9UYb3AoGAdgUX\nhg9DKSARvbg02FqAWmIGyvbvIACHQFEk4fE6v1j/GxGbcUnPs+K2mwkhzjXiEGd6\ndhMt0ch7xb3kNqhGc8OlWRt7LHK334F/xx/3zWpB+IJyrEx/MiosTf6vWN5mcz81\n5tT503KZ5q2J+GNO2H4FRmbQY47pX/ZcSokkwXUCgYEAkConBAMKQOLmscwY5xtR\nXp4K5RCSjbf668u6l8XavKt/Vnd6aC56Ggyz8XqIZtEDYPeBCvnPPtY7PlSrFIpm\nMLdURwAkl9kZB6O4K6pkqDSIQvQk2FUxa5V/m0jdyWZLI+Fyxoqo6INT/9OvnXsi\nnuGBuPLVphcrIOXTVTHzemo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-89cjf@nakhyatracampussecurity.iam.gserviceaccount.com",
+  "client_id": "115330512482515971462",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-89cjf%40nakhyatracampussecurity.iam.gserviceaccount.com"
+}
