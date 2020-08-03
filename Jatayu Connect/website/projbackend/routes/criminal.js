@@ -19,7 +19,27 @@ router.post("/criminal/create/:userId", isSignedIn, isAuthenticated, createCrimi
 router.get("/criminal/:userId/:criminalData", isSignedIn, isAuthenticated, getCriminal)
 router.get("/criminal/photo/:userId/:criminalId", photo)
 // router.post("/sendsms", sendSms)
+// router.post("/sendsms", async(req, res) => {
+//     console.log(req.body.number)
+//     let string = req.body.number
+//     let num = []
+//     len = req.body.number.length
+//     console.log(len)
+//     let i = len/13;
+//     let j = 0
+//     while(i>0){
+//         num[j] = string.slice(1, 11)
+//         j++;
+//         string = string.slice(13);
+//         i--;
+//     }
+//     console.log(num)
+//     const response = await fast2sms.sendMessage({authorization : process.env.API_KEY , message : req.body.message + "https://confirmsih.web.app/" || 'Team Nakhytra ROCKS' ,  numbers :num })
+//     res.send(response)
+// })
+
 router.post("/sendsms", async(req, res) => {
+    console.log(req.body.number)
     let string = req.body.number
     let num = []
     len = req.body.number.length
@@ -33,7 +53,8 @@ router.post("/sendsms", async(req, res) => {
         i--;
     }
     console.log(num)
-    const response = await fast2sms.sendMessage({authorization : process.env.API_KEY , message : req.body.message || 'Team Nakhytra ROCKS' ,  numbers :num })
+    const response = await fast2sms.sendMessage({authorization : process.env.API_KEY , message : req.body.message + "https://confirmsih.web.app/"  ,  numbers :num })
+    console.log(response)
     res.send(response)
 })
 

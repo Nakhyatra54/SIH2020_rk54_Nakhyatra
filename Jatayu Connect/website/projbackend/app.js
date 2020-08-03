@@ -11,9 +11,19 @@ const cors = require("cors");
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const criminalRoutes = require("./routes/criminal");
+const smsRoutes = require("./routes/sms");
+
 
 //DB connection
-mongoose.connect(process.env.DATABASE, {
+// mongoose.connect(process.env.DATABASE, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useCreateIndex: true
+// }).then(()=>{
+//     console.log("DB CONNECTED");
+// });
+
+mongoose.connect('mongodb://nakhyatra:nakhyatra@cluster0-shard-00-00.xh6k9.mongodb.net:27017,cluster0-shard-00-01.xh6k9.mongodb.net:27017,cluster0-shard-00-02.xh6k9.mongodb.net:27017/sih?ssl=true&replicaSet=atlas-zxdhtm-shard-0&authSource=admin&retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -31,6 +41,8 @@ app.use(express.urlencoded({extended: false})) /// new code written on 26-07-202
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", criminalRoutes);
+app.use("/api", smsRoutes);
+
 
 const port = process.env.PORT || 8000;
 

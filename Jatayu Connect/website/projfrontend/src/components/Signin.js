@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import '../App.css'
-import { signin, authenticate, isAutheticated } from "../api/authapi";
+import { signin, authenticate, isAutheticated, ipGet } from "../api/authapi";
 import Menu from "./Menu";
 
 const Signin = () => {
@@ -10,10 +10,25 @@ const Signin = () => {
     password: "123456",
     error: "",
     loading: false,
-    didRedirect: false
+    didRedirect: false, 
+    ip: "49.0.0.0"
   });
 
-  const { email, password, error, loading, didRedirect } = values;
+  const preload = () => {
+    ipGet()
+    .then(data=>{
+      console.log(data)
+      setValues({...values, ip: data})
+    })
+  }
+
+  useEffect(() => {
+    preload();
+  }, []);
+
+  const { email, password, error, loading, didRedirect, ip } = values;
+
+  console.log(ip)
   const { user } = isAutheticated();
 
   const handleChange = name => event => {
@@ -23,18 +38,20 @@ const Signin = () => {
   const onSubmit = event => {
     event.preventDefault();
     setValues({ ...values, error: false, loading: true });
-    signin({ email, password })
+    signin({ email, password, ip })
       .then(data => {
-        // if (data.error) {
-        //   setValues({ ...values, error: data.error, loading: false });
-        // } else {
+        if (data.error) {
+          setValues({ ...values, error: data.error, loading: false });
+          console.log(data.error)
+          return
+        } else {
           setValues({ ...values, loading: false });
           authenticate(data, () => {
             setValues({
               ...values,
               didRedirect: true
             });
-          })
+          })}
           console.log("Sign in successful")
         // }
       })

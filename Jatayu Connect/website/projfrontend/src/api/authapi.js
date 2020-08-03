@@ -16,6 +16,7 @@ export const signup = user => {
   };
 
   export const signin = user => {
+    console.log(user)
     return fetch(`${API}/signin`, {
       method: "POST",
       headers: {
@@ -61,3 +62,16 @@ export const signout = next => {
       return false;
     }
   };
+
+  export const ipGet = () => {
+    return fetch('https://api.ipify.org?format=jsonp?callback=?', {
+      method: 'GET',
+      headers: {},
+    })
+    .then(res => {
+      return res.text()
+    }).then(ip => {
+      console.log(ip);
+      return ip
+    });
+  }

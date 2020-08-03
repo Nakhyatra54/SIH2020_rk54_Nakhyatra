@@ -21,6 +21,10 @@ var userSchema = new Schema({
         type: String,
         required: true
     },
+    ip:{
+        type: String,
+        requried: true
+    },
     salt: String,
     role:{
         type: Number,

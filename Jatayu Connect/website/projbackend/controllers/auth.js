@@ -23,14 +23,16 @@ exports.signup = (req, res) => {
         res.json({
             name: user.name,
             email: user.email,
-            id: user._id
+            id: user._id,
+            ip: user.ip
         });
     })
     
 }
 
+
 exports.signin = (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, ip } = req.body;
 
     User.findOne({email}, (err, user) => {
         if(err || !user){
@@ -38,10 +40,15 @@ exports.signin = (req, res) => {
                 error: "USER email does not exsits"
             })
         }
-
         if(!user.authenticate(password)){
             return res.status(401).json({
                 error: "Email and password do not match"
+            })
+        }
+
+        if(user.ip !== ip){
+            return res.status(401).json({
+                error: "IP address does not match. You are not authorized"
             })
         }
 
@@ -49,9 +56,10 @@ exports.signin = (req, res) => {
         const token = jwt.sign({_id: user._id}, process.env.SECRET)
         //put token in cookie
         res.cookie("token", token, {expire: new Date() + 9999});
-
+        
         //send response to front end
         const {_id, name, email, role} = user;
+        console.log(user)
         return res.json({ token, user: {_id, name, email, role}});
     })
 }
@@ -71,7 +79,7 @@ exports.isSignedIn = expressJwt({
 
 //custom middlewares
 exports.isAuthenticated = (req, res, next) => {
-    let checker = req.profile && req.auth && req.profile._id == req.auth._id;
+    let checker = req.profile && req.auth && req.profile._id == req.auth._id ;
     if(!checker){
         return res.status(403).json({
             error: "ACCESS DENIED"
@@ -79,3 +87,6 @@ exports.isAuthenticated = (req, res, next) => {
     }
     next();
 }
+
+
+

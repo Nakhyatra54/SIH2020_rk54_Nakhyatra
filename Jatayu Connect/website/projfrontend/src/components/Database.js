@@ -31,8 +31,8 @@ const Database = () =>{
         college:"",
         criminalRecord: "",
         birthDatePlace: "",
-        nickName: "",
-        contact: "",
+        nickName: "none",
+        contact: "none",
         criminalImage: "",
         fingerprintImage:"",
         ratinaImage: "",
@@ -141,12 +141,12 @@ const Database = () =>{
                         class="form-control" 
                         name="email"/>
 
-                        <h5><label  class="form-group pt-3">Other contacts:</label></h5>
+                        {/* <h5><label  class="form-group pt-3">Other contacts:</label></h5>
                         <input type="text" 
                         onChange={handleChange("contact")}
                         value={contact}
                         class="form-control" 
-                        name="contact"/>
+                        name="contact"/> */}
 
                         <h5><label  class="form-group pt-3">Date of birth and place:</label></h5>
                         <input 
@@ -155,12 +155,12 @@ const Database = () =>{
                         class="form-control" 
                         name="birthDatePlace"/>
 
-                        <h5><label  class="form-group pt-3">Also known as:</label></h5>
+                        {/* <h5><label  class="form-group pt-3">Also known as:</label></h5>
                         <input 
                         onChange={handleChange("nickName")} 
                         value={nickName}
                         class="form-control" 
-                        name="nickName"/>
+                        name="nickName"/> */}
                         
                         <h5><label  class="form-group pt-3">Mother name:</label></h5>
                         <input 
@@ -224,7 +224,7 @@ const Database = () =>{
                         onChange={handleChange("ratinaImage")}
                         name="ratinaImage"/>
 
-                        <h5><label  class="form-group pt-3">Mother Image :</label></h5>
+                        {/* <h5><label  class="form-group pt-3">Mother Image :</label></h5>
                         <input type="file"  
                         accept="image"
                         onChange={handleChange("motherImage")}
@@ -240,7 +240,7 @@ const Database = () =>{
                         <input type="file"  
                         accept="image"
                         onChange={handleChange("spouseImage")}
-                        name="spouseImage"/>
+                        name="spouseImage"/> */}
                         
                         <br/><br/>
                         <button type="submit" onClick={storeSubmit} class="d-flex mx-auto btn btn-lg btn-outline-success">Submit</button>
@@ -339,12 +339,12 @@ const Database = () =>{
                             class="form-control" 
                             name="address"/>
 
-                            <h5><label  class="form-group pt-3">Email address:</label></h5>
+                            {/* <h5><label  class="form-group pt-3">Email address:</label></h5>
                             <input type="text" 
                             onChange={handleChange("email")}
                             value={email}
                             class="form-control" 
-                            name="email"/>
+                            name="email"/> */}
 
                             <h5><label  class="form-group pt-3">Mother name:</label></h5>
                             <input type="text" 
@@ -360,12 +360,12 @@ const Database = () =>{
                             class="form-control" 
                             name="fatherName"/>
 
-                            <h5><label  class="form-group pt-3">Spouse name:</label></h5>
+                            {/* <h5><label  class="form-group pt-3">Spouse name:</label></h5>
                             <input type="text" 
                             onChange={handleChange("spouseName")}
                             value={spouseName}
                             class="form-control" 
-                            name="spouseName"/>
+                            name="spouseName"/> */}
 
                             <h5><label  class="form-group pt-3">School:</label></h5>
                             <input type="text" 
@@ -414,7 +414,8 @@ const Database = () =>{
                                     <h4 className="text-warning my-4">EDUCATION QUALIFICATION</h4>
                                     <h3><pre><label  class="text-info pt-5 ">School                  : {school}</label></pre></h3>
                                     <h3><pre><label  class="text-info pt-5 ">College                 : {college}</label></pre></h3>
-                                    <h3><pre><label  class="text-info pt-5 ">Criminal Record         : <br/><div className="mt-5 offset-11 text-white">{criminalRecord}</div></label></pre></h3>    
+                                    <h3><pre><label  class="text-info pt-5 ">Criminal Record         : {criminalRecord}</label></pre></h3>
+                                    {/* <h3><pre><label  class="text-info pt-5 ">Criminal Record         : <br/><div className="mt-5 offset-11 text-white">{criminalRecord}</div></label></pre></h3>     */}
                                 </form> 
                     </div>
                     <div className="container-fluid row my-5 ml-5 pl-5">
@@ -434,7 +435,7 @@ const Database = () =>{
                                         </div>
                                     </div> 
 
-                                    <div className="container-fluid row my-5 ml-5 pl-5">
+                                    {/* <div className="container-fluid row my-5 ml-5 pl-5">
                                         <div className="col-4 mt-3 px-auto">
                                             <h4 className="my-5 text-info">Mother Image:</h4>
                                            
@@ -449,7 +450,7 @@ const Database = () =>{
                                             <h4 className="my-5 text-info">Spouse Image:</h4>
                                             <img src={"data:image;base64," + spouseImage} className="img-fluid w-75" />
                                         </div>
-                                    </div>   
+                                    </div>    */}
                 </div>
             </div>
         )
@@ -546,12 +547,14 @@ const Database = () =>{
     }
 
     const trackCriminal = () => {
+        
         return(
             <div className="row mt-5">
                 <div className="col-8 offset-2">
                     
                     <div style={{width:"100%", height:"900px"}} className="mt-5">
                        <MapContainer/>
+
                     </div>
                 </div>
             </div>
@@ -574,7 +577,7 @@ const Database = () =>{
       };
 
     return(
-        <div style={{backgroundColor: "black", height:"200pc"}}>
+        <div style={{backgroundColor: "black", height:"250pc"}}>
             <Menu/>
             {searchStoreButtons()}
             {success && successAlert()}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
-import { createCriminal, getCriminal, sendSms, sendEmail } from "../api/criminalapi";
+import { createCriminal, getCriminal, sendSms, sendEmail, createNumbers } from "../api/criminalapi";
 
 const Sendsms = () => {
 
@@ -11,10 +11,13 @@ const Sendsms = () => {
         subject: "",
         cc: "",
         success: false,
-        successMessage: ""
+        successMessage: "",
+        asp:"",
+        dsp:"",
+        pi:""
     })
 
-    const { number, to, message, subject, cc, success, successMessage } = values
+    const { number, to, message, subject, cc, success, successMessage, asp, dsp, pi } = values
 
     const [alertFlag, setAlertFlag] = useState({
         smsFlag: false,
@@ -61,11 +64,54 @@ const Sendsms = () => {
         })
     }
 
+    const submitNumbers = (e) => {
+        e.preventDefault();
+        createNumbers({dsp, asp, pi})
+        .then(data=>{
+            console.log(data)
+            setValues({
+                asp:"",
+                dsp:"",
+                pi:""
+        })
+    })
+    }
+
     const smsAlert = () => {
         return(
             <div style={{backgroundColor: "#037e8c"}} class="jumbotron container mt-5">
                 <h1 class="display-4 mb-5" style={{color: "#f4f4f2"}}>SEND ALERT SMS</h1>
+
                 <form>
+
+                <h4 class="display-4 mb-5" style={{color: "#f4f4f2"}}>Automatic sending SMS</h4>
+                    <label className="my-4" style={{color: "#f4f4f2", fontSize: "22px"}}>Additional Superintendent of Police (ASP):</label>
+                    <input 
+                        onChange={handleChange("asp")} 
+                        value={asp}
+                        class="form-control" 
+                        name="asp"/>
+                    <label className="my-4" style={{color: "#f4f4f2", fontSize: "22px"}}>Deputy Superintendent of Police (DSP):</label>
+                    <input 
+                        onChange={handleChange("dsp")} 
+                        value={dsp}
+                        class="form-control" 
+                        name="dsp"/>
+                    <label className="mb-4" style={{color: "#f4f4f2", fontSize: "22px"}}>Police Inspectors (PI):</label>
+                    <input 
+                        onChange={handleChange("pi")} 
+                        value={pi}
+                        class="form-control" 
+                        name="pi"/>
+                    
+                <p class="lead mt-5">
+                    <a class="btn  btn-lg" style={{backgroundColor: "#ffac0e", color:"#2f2b32"}} onClick={submitNumbers} role="button" type="submit">Submit</a>
+                </p>
+                </form>
+
+                <form>
+
+                <h4 class="display-4 mb-5 mt-5" style={{color: "#f4f4f2"}}>Manually sending SMS</h4>
                     <label className="mb-4" style={{color: "#f4f4f2", fontSize: "22px"}}>Enter contact numbers :</label>
                     <input 
                         onChange={handleChange("number")} 
@@ -183,7 +229,7 @@ const Sendsms = () => {
       };
 
     return(
-        <div className="" style={{backgroundColor: "#043353", height:"80pc"}}>
+        <div className="" style={{backgroundColor: "#043353", height:"150pc"}}>
             <Menu/>
             {switchButtons()}
             {successAlert()}

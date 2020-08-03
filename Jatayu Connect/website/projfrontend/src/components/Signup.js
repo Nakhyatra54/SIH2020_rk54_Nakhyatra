@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { signup } from "../api/authapi";
+import { signup, ipGet } from "../api/authapi";
 import Menu from "./Menu";
 import '../App.css'
 
@@ -10,10 +10,27 @@ const Signup = () => {
     email: "",
     password: "",
     error: "",
-    success: false
+    success: false,
+    ip:""
   });
 
-  const { name, email, password, error, success } = values;
+  const preload = () => {
+    ipGet()
+    .then(data=>{
+      console.log(data)
+      setValues({...values, ip: data})
+    })
+  }
+
+  useEffect(() => {
+    preload();
+  }, []);
+
+  const { name, email, password, error, success, ip } = values;
+
+  
+
+  
 
   const handleChange = name => event => {
     setValues({ ...values, error: false, [name]: event.target.value });
@@ -22,7 +39,7 @@ const Signup = () => {
   const onSubmit = event => {
     event.preventDefault();
     setValues({ ...values, error: false });
-    signup({ name, email, password })
+    signup({ name, email, password, ip })
       .then(data => {
         // if (data.error) {
         //   setValues({ ...values, error: data.error, success: false });

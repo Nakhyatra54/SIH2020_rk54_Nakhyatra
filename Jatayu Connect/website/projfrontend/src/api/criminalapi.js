@@ -38,7 +38,37 @@ export const getCriminal = (criminalData, token, userId) => {
       .catch(err => console.log(err));
   };
 
+  export const getNumbers = () => {
+    return fetch(`${API}/sms`, {
+      method: "GET",
+      credentials: "same-origin"
+    })
+      .then(response => {
+        return response.json();
+      })
+      .catch(err => console.log(err));
+  };
+
+  export const createNumbers = (numbers) => {
+    console.log(numbers)
+      return fetch(`${API}/sms/create`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(numbers)
+      })
+        .then(response => {
+          console.log(response)
+          return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
+
   export const sendSms = number => {
+    console.log(number)
     return fetch(`${API}/sendsms`, {
       method: "POST",
       headers : {
@@ -97,6 +127,16 @@ export const getCriminal = (criminalData, token, userId) => {
     .catch(err => console.log(err))
   }
 
+  export const getConfirmation = () => {
+    return fetch("https://us-central1-socialape-b28c2.cloudfunctions.net/api/getconfirmation",{
+      method: "GET"
+    })
+    .then(response => {
+      console.log(response)
+      return response.json()
+    })
+    .catch(err => console.log(err))
+  }
 //   let settings = {
 //     "async": true,
 //     "crossDomain": true,
