@@ -95,4 +95,4 @@ Two main features of the DB are :
 
 
 
-Members of the Team Include [Subrat](https://github.com/subratkishoredutta), [Sudarshan](https://github.com/SudarshanSaikia), [Chailex](https://github.com/Chailex), [Zafer](https://github.com/Zafershah24), [Agnideep](https://github.com/Agni-capricorn) & [Chinmoyee](https://github.com/ChinmoyeeDeka) 
+Members of the Team Include [Subrat](https://github.com/subratkishoredutta), [Zafer](https://github.com/Zafershah24), [Sudarshan](https://github.com/SudarshanSaikia), [Chailex](https://github.com/Chailex), [Agnideep](https://github.com/Agni-capricorn) & [Chinmoyee](https://github.com/ChinmoyeeDeka) 
