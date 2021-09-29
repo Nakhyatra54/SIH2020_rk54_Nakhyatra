@@ -18,7 +18,7 @@
     "express-validator": "^6.2.0",
     "fast-two-sms": "^2.1.0",
     "formidable": "^1.2.2",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "js-base64": "^3.2.4",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
